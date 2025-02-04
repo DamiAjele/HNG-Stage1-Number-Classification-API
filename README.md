@@ -75,7 +75,7 @@ The server will run on http://localhost:8000.
 
 ## Usage
 
-### Endpoint
+### Endpoints
 
 GET /api/classify-number?number=371
 
