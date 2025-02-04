@@ -26,7 +26,8 @@ app.get("/api/classify-number", async (req, res) => {
         is_perfect: classification.isPerfect,
         properties: classification.properties,
         digit_sum: classification.digitSum,
-        fun_fact: funFact
+        fun_fact: funFact,
+        supposedFunFact: "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
     });
 });
 
