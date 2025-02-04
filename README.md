@@ -1,6 +1,5 @@
 # **Number Classification API**  
-A simple API that classifies numbers based on their mathematical properties and provides a fun fact about the number.
-
+This is an API that classifies a number and returns its mathematical properties along with a fun fact.
 
 ## **Table of Contents**
 - [Project Overview](#project-overview)
