@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # **Number Classification API**  
 This is an API that classifies a number and returns its mathematical properties along with a fun fact.
 
@@ -138,3 +139,7 @@ If you have any questions or feedback, feel free to reach out:
 
 **GitHub**: https://github.com/DamiAjele
 
+=======
+# HNG-Stage1-Number-Classification-API
+This is an  API built with node.js and express.js that classifies a number and returns its mathematical properties
+>>>>>>> 5251eee80b3422fb1e20aa9fdc6dcf2b8a16f31b
