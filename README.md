@@ -75,13 +75,13 @@ The server will run on http://localhost:8000.
 
 ## Usage
 
-### API Endpoint
+### Endpoint
 
 GET /api/classify-number?number=371
 
 Classifies a given number and returns properties.
 
-### Example Requests and Responses
+### Example Requests & Responses
 
 **Valid Request**
 ```http
