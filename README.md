@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# **# HNG-Stage1-Number-Classification-API**  
+# **HNG-Stage1-Number-Classification-API**  
 This is an API that classifies a number and returns its mathematical properties along with a fun fact.
 
 ## **Table of Contents**
