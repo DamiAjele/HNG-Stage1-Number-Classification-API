@@ -121,7 +121,7 @@ Error Response (400 Bad Request)
 
 The API is deployed on Render. You can access it using the following base URL:
 
-https://your-app.herokuapp.com/api/classify-number?number=<your-number>
+https://hng-stage1-number-classification-api-1.onrender.com/api/classify-number?number=371
 
 
 ## Acknowledgements
