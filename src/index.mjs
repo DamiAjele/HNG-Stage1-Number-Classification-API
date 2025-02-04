@@ -26,7 +26,7 @@ app.get("/api/classify-number", async (req, res) => {
         is_perfect: classification.isPerfect,
         properties: classification.properties,
         digit_sum: classification.digitSum,
-        fun_fact: funFact
+        fun_fact: funFact  
     });
 });
 
