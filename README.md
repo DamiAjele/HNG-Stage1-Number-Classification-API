@@ -77,7 +77,7 @@ The server will run on http://localhost:8000.
 
 ### Endpoints
 
-GET /api/classify-number?number=371
+https://hng-stage1-number-classification-api-1.onrender.com/api/classify-number?number=371
 
 Classifies a given number and returns properties.
 
@@ -85,7 +85,7 @@ Classifies a given number and returns properties.
 
 **Valid Request**
 ```http
-GET /api/classify-number?number=371
+GET https://hng-stage1-number-classification-api-1.onrender.com/api/classify-number?number=371
 ```
 
 ✅**Success Response (200 OK)**
