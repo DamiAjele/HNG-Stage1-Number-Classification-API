@@ -121,7 +121,7 @@ Error Response (400 Bad Request)
 
 The API is deployed on Render. You can access it using the following base URL:
 
-https://hng-stage1-number-classification-api-1.onrender.com/api/classify-number?number=371
+https://hng-stage1-number-classification-api-1.onrender.com/api/classify-number
 
 
 ## Acknowledgements

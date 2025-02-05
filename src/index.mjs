@@ -1,13 +1,68 @@
 import express from 'express';
-import { classifyNumber } from './utility/classifynumber.mjs';
-import { fetchFunFact } from './utility/fetchfunfact.mjs';
 import cors from 'cors';
+import axios from "axios";
 
 const app = express();
 const PORT = process.env.port || 8000;
 
 app.use(cors());
 app.use(express.json());
+
+// Classify Number
+function classifyNumber(num) {
+    const isPrime = checkPrime(num);
+    const isPerfect = checkPerfect(num);
+    const isArmstrong = checkArmstrong(num);
+    const digitSum = getDigitSum(num);
+    
+    let properties = [];
+    if (isArmstrong) properties.push("armstrong");
+    properties.push(num % 2 === 0 ? "even" : "odd");
+
+    return { isPrime, isPerfect, properties, digitSum };
+}
+
+function checkPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i * i <= n; i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+function checkPerfect(n) {
+    let sum = 1;
+    for (let i = 2; i * i <= n; i++) {
+        if (n % i === 0) {
+            sum += i;
+            if (i !== n / i) sum += n / i;
+        }
+    }
+    return sum === n && n !== 1;
+}
+
+function checkArmstrong(n) {
+    const digits = String(n).split("").map(Number);
+    const sum = digits.reduce((acc, d) => acc + Math.pow(d, digits.length), 0);
+    return sum === n;
+}
+
+function getDigitSum(n) {
+    return String(Math.abs(n)).split("").reduce((sum, d) => sum + Number(d), 0);
+}
+
+
+
+// Fetch Funfact From Numbers API
+async function fetchFunFact(num) {
+    try {
+        const response = await axios.get(`http://numbersapi.com/${num}/math`);
+        return response.data;
+    } catch (error) {
+        return "No fun fact available.";
+    }
+}
+
 
 app.get("/api/classify-number", async (req, res) => {
     const { number } = req.query;
