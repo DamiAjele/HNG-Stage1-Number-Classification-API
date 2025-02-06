@@ -15,9 +15,9 @@ function classifyNumber(num) {
     const isArmstrong = checkArmstrong(num);
     const digitSum = getDigitSum(num);
     
-    let properties = [];
-    if (isArmstrong) properties.push("armstrong");
-    properties.push(num % 2 === 0 ? "even" : "odd");
+    const properties = [
+    isArmstrong ? "armstrong" : null,
+    num % 2 === 0 ? "even" : "odd"].filter(Boolean)
 
     return { isPrime, isPerfect, properties, digitSum };
 }
@@ -42,6 +42,9 @@ function checkPerfect(n) {
 }
 
 function checkArmstrong(n) {
+    if (n < 0) {
+        return false
+    }
     const digits = String(n).split("").map(Number);
     const sum = digits.reduce((acc, d) => acc + Math.pow(d, digits.length), 0);
     return sum === n;
