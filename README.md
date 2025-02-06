@@ -115,7 +115,6 @@ Error Response (400 Bad Request)
 ## Error Handling
 - If the number is not provided → Returns 400 Bad Request
 - If the number is not an integer → Returns 400 Bad Request
-- If an unexpected error occurs → Returns 500 Internal Server Error
 
 ## Deployment
 

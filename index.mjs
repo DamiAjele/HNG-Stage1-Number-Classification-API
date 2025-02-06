@@ -88,13 +88,6 @@ app.get("/api/classify-number", async (req, res) => {
     });
 });
 
-// Error-handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack); // Logs the error stack
-    res.status(500).json({ message: "Something went wrong!" }); // Sends a response
-});
-  
-
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
