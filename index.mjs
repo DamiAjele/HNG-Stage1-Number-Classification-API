@@ -42,9 +42,10 @@ function checkPerfect(n) {
 }
 
 function checkArmstrong(n) {
-    const digits = String(n).split("").map(Number);
+    const absN = Math.abs(n)
+    const digits = String(absN).split("").map(Number);
     const sum = digits.reduce((acc, d) => acc + Math.pow(d, digits.length), 0);
-    return sum === n;
+    return sum === absN;
 }
 
 function getDigitSum(n) {
